@@ -15,4 +15,13 @@ var friendsArr = [{
       ]
   }];
 
-  module.exports = friendsArr;
+  module.exports = function(newFriend) {
+    if (newFriend !== null) {
+        console.log(newFriend)
+        console.log(newFriend.scores)
+        newScores = newFriend.scores.split(",")
+        console.log(newScores)
+        // friendsArr.push(newFriend);
+    }
+    return friendsArr;
+  };

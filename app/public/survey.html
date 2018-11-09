@@ -36,11 +36,136 @@ You feel more energetic after spending time with a group of people. -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   </head>
   <body>
-    <div class="jumbotron">
+    <div class="jumbotron m-3 bg-info text-light">
       <h1 class="display-4">Survey</h1>
-      <p class="lead">Need more friends? Take our quick and easy survey to be matched with a friend from our database.</p>
-      <hr class="my-4">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Take The Survey</a>
+      <hr class="my-4 bg-light">
+      <form>
+      <h3>About You</h3>
+        <div class="form-group ml-3 mr-5">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group ml-3 mr-5">
+          <label for="photo">Photo:</label>
+          <input type="text" class="form-control" id="photo" placeholder="Please paste a link to a photo of you here...">
+        </div>
+      <hr class="my-4 bg-light">
+      <div class="ml-5 w-50">
+          <div class="form-group">
+            <label for="question1">Question 1</label>
+            <select class="form-control" id="question1">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question2">Question 2</label>
+            <select class="form-control" id="question2">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question3">Question 3</label>
+            <select class="form-control" id="question3">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question4">Question 4</label>
+            <select class="form-control" id="question4">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question5">Question 5</label>
+            <select class="form-control" id="question5">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question6">Question 6</label>
+            <select class="form-control" id="question6">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question7">Question 7</label>
+            <select class="form-control" id="question7">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question8">Question 8</label>
+            <select class="form-control" id="question8">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question9">Question 9</label>
+            <select class="form-control" id="question9">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question10">Question 10</label>
+            <select class="form-control" id="question10">
+              <option selected>Choose...</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group mr-5">
+          </div>
+        </form>
+      </div>
+      <a class="btn btn-dark btn-lg w-100 my-auto" href="./api/friends" role="button">Submit</a>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
