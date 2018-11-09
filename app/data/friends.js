@@ -16,27 +16,39 @@ var friendsArr = [{
   }];
 
   module.exports = function(newFriend) {
+    //   console.log("before if: ", newFriend)
     if (newFriend !== null) {
-        console.log(newFriend)
+        // console.log("inside if: ", newFriend)
         // console.log(newFriend.scores)
-        // newScores = newFriend.scores.split(",")
+        newScores = newFriend.scores
         // console.log(newScores)
-        // for (i = 0; i < newScores.length; i++) {
-        //     num  = parseInt(newScores[i]);
-        //     newScores[i] = num;
-        // }
+        for (i = 0; i < newScores.length; i++) {
+            num  = parseInt(newScores[i]);
+            newScores[i] = num;
+        }
         // console.log(newScores);
-        // newFriend.scores = newScores;
-        // console.log(newFriend)
-        // friendsArr.push(newFriend);
+        newFriend.scores = newScores;
         // new score from input
+        var leastDiff = 40;
+        var matchIndex = 0;
         var sc = newFriend.scores;
         for (i = 0; i < friendsArr.length; i++) {
+            var totalDiff = 0;
             var fsc = friendsArr[i].scores;
             for (j = 0; j < sc.length; j++) {
-                
+                var diff = sc[j] - fsc[j];
+                if (diff < 0) {
+                    diff = diff * -1;
+                }
+                totalDiff += diff;
+            }
+            if (totalDiff < leastDiff) {
+                leastDiff = totalDiff;
+                matchIndex = i;
+                console.log("Match index is ", matchIndex)
             }
         }
     }
-    return friendsArr;
+    // friendsArr.push(newFriend);
+    return friendsArr[matchIndex];
   };
