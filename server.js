@@ -1,7 +1,6 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var path = require("path");
 var htmlRoute = require("./app/routing/htmlRoutes");
 var apiRoute = require("./app/routing/apiRoutes")
 
@@ -14,7 +13,10 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// call function to handle api routes
 apiRoute(app);
+
+// call function to handle html routes
 htmlRoute(app);
 
 

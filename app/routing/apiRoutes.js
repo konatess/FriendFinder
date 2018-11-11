@@ -1,5 +1,4 @@
 // DEPENDENCIES
-var path = require("path");
 var friends = require("../data/friends")
 
 // MODULE TO EXPORT

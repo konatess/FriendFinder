@@ -1,3 +1,4 @@
+// hard coded examples, mainly for grading purposes
 var friendsArr = [
     {
         name: "Snake",
@@ -26,36 +27,52 @@ var friendsArr = [
     }
 ];
 
-  module.exports = function(newFriend) {
+// MODULE FOR EXPORT
+// includes matching logic
+module.exports = function(newFriend) {
+    // if 
     if (newFriend !== null) {
+        // take scores from strings to integers
         newScores = newFriend.scores
         for (i = 0; i < newScores.length; i++) {
             num  = parseInt(newScores[i]);
             newScores[i] = num;
         }
+        // update the scores in newFriend to the new integers array
         newFriend.scores = newScores;
         // 10 questions * 4(greatest possible difference between 1 and 5)
+        // initiallizing leastDiff at max difference
         var leastDiff = 40;
         var matchIndex = 0;
         // new score from input
         var sc = newFriend.scores;
         for (i = 0; i < friendsArr.length; i++) {
             var totalDiff = 0;
+            // friend scores
             var fsc = friendsArr[i].scores;
+            // caluculate the difference 
             for (j = 0; j < sc.length; j++) {
                 var diff = sc[j] - fsc[j];
+                // eliminate negative results
                 if (diff < 0) {
                     diff = diff * -1;
                 }
+                // add to total
                 totalDiff += diff;
             }
+            // check against previous results
             if (totalDiff < leastDiff) {
                 leastDiff = totalDiff;
                 matchIndex = i;
             }
         }
+        // add the new data to the array
+        friendsArr.push(newFriend);
+        // return the matching friend
+        return friendsArr[matchIndex];
     }
-    
-    friendsArr.push(newFriend);
-    return friendsArr[matchIndex];
-  };
+    else {
+        // this should never show up now that new friends are added from the front end
+        console.log("Error: no new friend was added.")
+    }
+};
